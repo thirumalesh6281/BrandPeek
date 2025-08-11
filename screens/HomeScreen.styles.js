@@ -1,71 +1,99 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    padding: 10,
+    backgroundColor: "#fff5f0",
+    paddingHorizontal: 15,
+    paddingTop: 20,
   },
+
   tableHeader: {
-    flexDirection: 'row',
-    paddingVertical: 12,
-    paddingHorizontal: 8,
-    backgroundColor: '#f5f5f5',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    flexDirection: "row",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    backgroundColor: "#0b8585ff",
+    borderRadius: 10,
+    marginBottom: 12,
+    shadowColor: "#0b8585ff",
+    shadowOpacity: 0.5,
+    shadowOffset: { width: 0, height: 3 },
+    shadowRadius: 5,
+    elevation: 5,
   },
+
   headerText: {
     flex: 1,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#333',
+    fontWeight: "800",
+    fontSize: 16,
+    color: "#ecececff",
+    textAlign: "center",
   },
+
   listContent: {
-    paddingBottom: 20,
+    paddingBottom: 40,
   },
+
   card: {
-    marginBottom: 8,
-    borderRadius: 6,
-    backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 2,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    marginBottom: 15,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    shadowColor: "#fcb69f",
+    shadowOpacity: 0.3,
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 6,
+    elevation: 4,
   },
+
   tableRow: {
-    flexDirection: 'row',
-    padding: 12,
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
+
   logoColumn: {
-    flex: 0.2,
-    alignItems: 'center',
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  textColumn: {
-    flex: 0.3,
-    paddingHorizontal: 8,
-  },
-  detailsColumn: {
-    flex: 0.5,
-  },
+
   logo: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    borderWidth: 2,
+    borderColor: "#034b3fff",
   },
+
+  textColumn: {
+    flex: 2,
+    paddingHorizontal: 10,
+  },
+
   name: {
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 4,
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#044d40ff",
+    marginBottom: 2,
   },
+
   tagline: {
-    fontSize: 12,
-    color: '#666',
+    fontSize: 14,
+    fontWeight: "500",
+    fontStyle: "italic",
+    color: "#044238ff",
   },
+
+  detailsColumn: {
+    flex: 4,           // increased flex to give more room
+    paddingLeft: 15,   // added padding for breathing space
+  },
+
   description: {
-    fontSize: 12,
-    color: '#444',
-    lineHeight: 16,
+    fontSize: 14,
+    color: "#033028ff",
   },
 });
